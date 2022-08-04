@@ -36,7 +36,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
             .status(status.value())
             .error(status.getReasonPhrase())
             .cause(exception.getClass().getSimpleName())
-            .message("Houveram erros de validação")
+            .message("Confira se seu e-mail está correto, ou se o valor é maior que 10 e menor que 100")
             .timestamp(LocalDateTime.now())
             .errors(convertFieldErrors(exception.getBindingResult().getFieldErrors()))
             .build();
